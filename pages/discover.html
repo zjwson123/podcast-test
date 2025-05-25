@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发现 - 播客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <!-- iOS 状态栏 -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span>9:41</span>
+                </div>
+                <div class="status-right">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-three-quarters"></i>
+                </div>
+            </div>
+
+            <!-- 导航栏 -->
+            <div class="nav-bar">
+                <div></div>
+                <h1 class="nav-title">发现</h1>
+                <button class="nav-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- 主内容区域 -->
+            <div class="main-content">
+                <!-- 搜索框 -->
+                <input type="text" class="search-box" placeholder="搜索播客、主播或话题">
+
+                <!-- 分类标签 -->
+                <div style="padding: 16px; overflow-x: auto; white-space: nowrap;">
+                    <a href="#" class="category-tag active">全部</a>
+                    <a href="#" class="category-tag">科技</a>
+                    <a href="#" class="category-tag">商业</a>
+                    <a href="#" class="category-tag">文化</a>
+                    <a href="#" class="category-tag">健康</a>
+                    <a href="#" class="category-tag">教育</a>
+                    <a href="#" class="category-tag">娱乐</a>
+                </div>
+
+                <!-- 热门排行 -->
+                <div style="margin: 24px 16px 16px;">
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 16px;">热门排行</h3>
+                </div>
+
+                <div class="podcast-item">
+                    <div style="width: 24px; text-align: center; font-weight: bold; color: #FF6B35;">1</div>
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">科技聊天室</h4>
+                        <p class="podcast-subtitle">深度解析最新科技趋势</p>
+                        <p class="podcast-meta">1.2万订阅 · 每周更新</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 16px; color: #007AFF;">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item">
+                    <div style="width: 24px; text-align: center; font-weight: bold; color: #FF6B35;">2</div>
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">商业思维</h4>
+                        <p class="podcast-subtitle">成功企业家的智慧分享</p>
+                        <p class="podcast-meta">8.5千订阅 · 每周更新</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 16px; color: #007AFF;">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item">
+                    <div style="width: 24px; text-align: center; font-weight: bold; color: #8E8E93;">3</div>
+                    <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">深度对话</h4>
+                        <p class="podcast-subtitle">与行业领袖的深度访谈</p>
+                        <p class="podcast-meta">7.8千订阅 · 每周更新</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 16px; color: #007AFF;">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <!-- 推荐分类 -->
+                <div style="margin: 32px 16px 16px;">
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 16px;">为你推荐</h3>
+                </div>
+
+                <!-- 横向滚动的推荐卡片 -->
+                <div style="padding: 0 16px; overflow-x: auto; white-space: nowrap;">
+                    <div style="display: inline-block; width: 200px; margin-right: 16px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=120&fit=crop" 
+                             style="width: 100%; height: 120px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                        <div style="padding: 12px;">
+                            <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 4px; white-space: normal;">文化漫谈</h4>
+                            <p style="font-size: 12px; color: #8E8E93; white-space: normal;">探索世界各地的文化差异</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: inline-block; width: 200px; margin-right: 16px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&h=120&fit=crop" 
+                             style="width: 100%; height: 120px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                        <div style="padding: 12px;">
+                            <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 4px; white-space: normal;">健康生活</h4>
+                            <p style="font-size: 12px; color: #8E8E93; white-space: normal;">专业医生的健康建议</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: inline-block; width: 200px; margin-right: 16px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=200&h=120&fit=crop" 
+                             style="width: 100%; height: 120px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                        <div style="padding: 12px;">
+                            <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 4px; white-space: normal;">音乐故事</h4>
+                            <p style="font-size: 12px; color: #8E8E93; white-space: normal;">每首歌背后的故事</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 新上线 -->
+                <div style="margin: 32px 16px 16px;">
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 16px;">新上线</h3>
+                </div>
+
+                <div class="podcast-item">
+                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">创业故事</h4>
+                        <p class="podcast-subtitle">真实的创业经历分享</p>
+                        <p class="podcast-meta">新节目 · 刚刚上线</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 16px; color: #007AFF;">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">心理学课堂</h4>
+                        <p class="podcast-subtitle">用心理学解读生活</p>
+                        <p class="podcast-meta">新节目 · 1天前</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 16px; color: #007AFF;">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 迷你播放器 -->
+            <div class="mini-player">
+                <div class="mini-player-info">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=80&h=80&fit=crop" 
+                         alt="播客封面" class="mini-player-cover">
+                    <div class="mini-player-text">
+                        <div class="mini-player-title">科技聊天室</div>
+                        <div class="mini-player-subtitle">AI的未来发展趋势</div>
+                    </div>
+                </div>
+                <div class="mini-player-controls">
+                    <button class="mini-player-btn">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="mini-player-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 底部Tab栏 -->
+            <div class="tab-bar">
+                <a href="#" class="tab-item">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="#" class="tab-item active">
+                    <i class="fas fa-compass"></i>
+                    <span>发现</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-play-circle"></i>
+                    <span>播放</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-bookmark"></i>
+                    <span>订阅</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

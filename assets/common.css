@@ -1,0 +1,363 @@
+/* 播客App公共样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f7;
+    overflow-x: hidden;
+}
+
+/* iPhone 15 Pro 容器样式 */
+.phone-container {
+    width: 393px;
+    height: 852px;
+    background: #000;
+    border-radius: 40px;
+    padding: 8px;
+    margin: 20px auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* iOS 状态栏 */
+.status-bar {
+    height: 44px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    z-index: 100;
+}
+
+.status-left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* 导航栏 */
+.nav-bar {
+    height: 44px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 0.5px solid rgba(0,0,0,0.1);
+}
+
+.nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #007AFF;
+    cursor: pointer;
+}
+
+/* 主内容区域 */
+.main-content {
+    height: calc(100% - 44px - 44px - 83px - 60px); /* 减去状态栏、导航栏、Tab栏和迷你播放器 */
+    overflow-y: auto;
+    padding: 0;
+}
+
+/* 底部Tab栏 */
+.tab-bar {
+    height: 83px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    border-top: 0.5px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 34px; /* 安全区域 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #8E8E93;
+    text-decoration: none;
+    font-size: 10px;
+    transition: color 0.2s;
+}
+
+.tab-item.active {
+    color: #FF6B35;
+}
+
+.tab-item i {
+    font-size: 20px;
+}
+
+/* 迷你播放器 */
+.mini-player {
+    height: 60px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    border-top: 0.5px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position: absolute;
+    bottom: 83px;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+
+.mini-player-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mini-player-cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.mini-player-text {
+    flex: 1;
+}
+
+.mini-player-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 2px;
+}
+
+.mini-player-subtitle {
+    font-size: 12px;
+    color: #8E8E93;
+}
+
+.mini-player-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mini-player-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* 卡片样式 */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 播客项目 */
+.podcast-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 12px;
+    margin: 8px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.podcast-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.podcast-info {
+    flex: 1;
+}
+
+.podcast-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.podcast-subtitle {
+    font-size: 14px;
+    color: #8E8E93;
+    margin-bottom: 4px;
+}
+
+.podcast-meta {
+    font-size: 12px;
+    color: #C7C7CC;
+}
+
+/* 渐变背景 */
+.gradient-bg {
+    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+}
+
+/* 搜索框 */
+.search-box {
+    background: #F2F2F7;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    width: 100%;
+    margin: 16px;
+    width: calc(100% - 32px);
+}
+
+/* 分类标签 */
+.category-tag {
+    display: inline-block;
+    background: #F2F2F7;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 4px;
+    text-decoration: none;
+}
+
+.category-tag.active {
+    background: #FF6B35;
+    color: #fff;
+}
+
+/* 播放器样式 */
+.player-cover {
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 40px auto;
+    display: block;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.player-info {
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 40px;
+}
+
+.player-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.player-subtitle {
+    font-size: 16px;
+    color: #8E8E93;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.player-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+
+.player-btn.play {
+    font-size: 48px;
+    color: #FF6B35;
+}
+
+.progress-bar {
+    margin: 0 40px 20px;
+}
+
+.progress-track {
+    height: 4px;
+    background: #F2F2F7;
+    border-radius: 2px;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #FF6B35;
+    border-radius: 2px;
+    width: 30%;
+}
+
+.progress-time {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 40px 0;
+    font-size: 12px;
+    color: #8E8E93;
+}
+
+/* 响应式调整 */
+@media (max-width: 430px) {
+    .phone-container {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+    
+    .phone-screen {
+        border-radius: 0;
+    }
+}

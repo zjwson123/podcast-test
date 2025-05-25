@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>播客App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/common.css">
+    <style>
+        /* 页面内容 - 无动画，瞬时切换 */
+        .main-content {
+            /* 移除过渡动画，实现瞬时切换 */
+        }
+        
+        /* Tab栏点击效果 */
+        .tab-item {
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 0.08s ease, transform 0.08s ease;
+        }
+        
+        .tab-item:hover {
+            opacity: 0.7;
+        }
+        
+        .tab-item:active {
+            transform: scale(0.96);
+            opacity: 0.5;
+        }
+        
+        /* 优化渲染性能 */
+        .phone-screen {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+        
+        /* Tab切换时的即时反馈 */
+        .tab-item.active {
+            transition: none; /* 激活状态无动画 */
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <!-- iOS 状态栏 -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span>9:41</span>
+                </div>
+                <div class="status-right">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-three-quarters"></i>
+                </div>
+            </div>
+
+            <!-- 导航栏 -->
+            <div class="nav-bar">
+                <button class="nav-button">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                <h1 class="nav-title" id="nav-title">播客</h1>
+                <button class="nav-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- 主内容区域 -->
+            <div class="main-content" id="main-content">
+                <!-- 内容将通过JavaScript动态加载 -->
+            </div>
+
+            <!-- 迷你播放器 -->
+            <div class="mini-player" id="mini-player">
+                <div class="mini-player-info">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=80&h=80&fit=crop" 
+                         alt="播客封面" class="mini-player-cover">
+                    <div class="mini-player-text">
+                        <div class="mini-player-title">科技聊天室</div>
+                        <div class="mini-player-subtitle">AI的未来发展趋势</div>
+                    </div>
+                </div>
+                <div class="mini-player-controls">
+                    <button class="mini-player-btn">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="mini-player-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 底部Tab栏 -->
+            <div class="tab-bar">
+                <div class="tab-item active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </div>
+                <div class="tab-item" data-page="discover">
+                    <i class="fas fa-compass"></i>
+                    <span>发现</span>
+                </div>
+                <div class="tab-item" data-page="player">
+                    <i class="fas fa-play-circle"></i>
+                    <span>播放</span>
+                </div>
+                <div class="tab-item" data-page="subscriptions">
+                    <i class="fas fa-bookmark"></i>
+                    <span>订阅</span>
+                </div>
+                <div class="tab-item" data-page="profile">
+                    <i class="fas fa-user"></i>
+                    <span>我的</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/app.js"></script>
+</body>
+</html> 

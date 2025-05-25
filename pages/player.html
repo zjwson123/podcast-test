@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>播放器 - 播客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <!-- iOS 状态栏 -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span>9:41</span>
+                </div>
+                <div class="status-right">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-three-quarters"></i>
+                </div>
+            </div>
+
+            <!-- 导航栏 -->
+            <div class="nav-bar">
+                <button class="nav-button">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <h1 class="nav-title">正在播放</h1>
+                <button class="nav-button">
+                    <i class="fas fa-ellipsis-h"></i>
+                </button>
+            </div>
+
+            <!-- 主内容区域 -->
+            <div class="main-content" style="height: calc(100% - 44px - 44px - 83px); padding: 0;">
+                <!-- 播客封面 -->
+                <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=560&h=560&fit=crop" 
+                     alt="播客封面" class="player-cover">
+
+                <!-- 播客信息 -->
+                <div class="player-info">
+                    <h2 class="player-title">AI的未来发展趋势</h2>
+                    <p class="player-subtitle">科技聊天室 · 第42期</p>
+                </div>
+
+                <!-- 进度条 -->
+                <div class="progress-bar">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                        <div style="position: absolute; top: -6px; left: 30%; width: 16px; height: 16px; background: #FF6B35; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
+                    </div>
+                    <div class="progress-time">
+                        <span>23:15</span>
+                        <span>45:30</span>
+                    </div>
+                </div>
+
+                <!-- 播放控制 -->
+                <div class="player-controls">
+                    <button class="player-btn">
+                        <i class="fas fa-backward"></i>
+                    </button>
+                    <button class="player-btn">
+                        <i class="fas fa-undo" style="font-size: 20px;"></i>
+                    </button>
+                    <button class="player-btn play">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="player-btn">
+                        <i class="fas fa-redo" style="font-size: 20px;"></i>
+                    </button>
+                    <button class="player-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+
+                <!-- 功能按钮 -->
+                <div style="display: flex; justify-content: space-around; align-items: center; margin: 40px 60px 20px;">
+                    <button style="background: none; border: none; font-size: 20px; color: #8E8E93;">
+                        <i class="fas fa-list"></i>
+                    </button>
+                    <button style="background: none; border: none; font-size: 20px; color: #8E8E93;">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <button style="background: none; border: none; font-size: 20px; color: #FF6B35;">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button style="background: none; border: none; font-size: 20px; color: #8E8E93;">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+
+                <!-- 播放速度 -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 20px 0;">
+                    <span style="font-size: 14px; color: #8E8E93;">播放速度</span>
+                    <div style="display: flex; gap: 8px;">
+                        <button style="background: #F2F2F7; border: none; border-radius: 16px; padding: 6px 12px; font-size: 14px; color: #8E8E93;">0.8x</button>
+                        <button style="background: #FF6B35; border: none; border-radius: 16px; padding: 6px 12px; font-size: 14px; color: #fff;">1.0x</button>
+                        <button style="background: #F2F2F7; border: none; border-radius: 16px; padding: 6px 12px; font-size: 14px; color: #8E8E93;">1.2x</button>
+                        <button style="background: #F2F2F7; border: none; border-radius: 16px; padding: 6px 12px; font-size: 14px; color: #8E8E93;">1.5x</button>
+                    </div>
+                </div>
+
+                <!-- 节目描述 -->
+                <div style="margin: 20px 40px; padding: 16px; background: #F8F8F8; border-radius: 12px;">
+                    <h4 style="font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #000;">本期内容</h4>
+                    <p style="font-size: 14px; color: #666; line-height: 1.5;">
+                        在这一期节目中，我们将深入探讨人工智能的最新发展趋势，包括大语言模型的突破、AI在各行业的应用前景，以及可能带来的社会影响。我们邀请了业内专家分享他们的见解和预测。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 底部Tab栏 -->
+            <div class="tab-bar">
+                <a href="#" class="tab-item">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-compass"></i>
+                    <span>发现</span>
+                </a>
+                <a href="#" class="tab-item active">
+                    <i class="fas fa-play-circle"></i>
+                    <span>播放</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-bookmark"></i>
+                    <span>订阅</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

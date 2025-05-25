@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订阅 - 播客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <!-- iOS 状态栏 -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span>9:41</span>
+                </div>
+                <div class="status-right">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-three-quarters"></i>
+                </div>
+            </div>
+
+            <!-- 导航栏 -->
+            <div class="nav-bar">
+                <button class="nav-button">编辑</button>
+                <h1 class="nav-title">订阅</h1>
+                <button class="nav-button">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <!-- 主内容区域 -->
+            <div class="main-content">
+                <!-- 统计信息 -->
+                <div style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); margin: 16px; border-radius: 16px; padding: 20px; color: white;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 4px;">12</h3>
+                            <p style="font-size: 14px; opacity: 0.9;">已订阅播客</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 4px;">5</h3>
+                            <p style="font-size: 14px; opacity: 0.9;">待更新</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 4px;">23</h3>
+                            <p style="font-size: 14px; opacity: 0.9;">未播放</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 筛选标签 -->
+                <div style="padding: 16px; display: flex; gap: 8px; overflow-x: auto;">
+                    <button style="background: #FF6B35; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 14px; white-space: nowrap;">全部</button>
+                    <button style="background: #F2F2F7; color: #000; border: none; border-radius: 20px; padding: 8px 16px; font-size: 14px; white-space: nowrap;">有更新</button>
+                    <button style="background: #F2F2F7; color: #000; border: none; border-radius: 20px; padding: 8px 16px; font-size: 14px; white-space: nowrap;">已下载</button>
+                    <button style="background: #F2F2F7; color: #000; border: none; border-radius: 20px; padding: 8px 16px; font-size: 14px; white-space: nowrap;">收藏</button>
+                </div>
+
+                <!-- 订阅列表 -->
+                <div class="podcast-item" style="position: relative;">
+                    <div style="position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; background: #FF6B35; border-radius: 50%;"></div>
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">科技聊天室</h4>
+                        <p class="podcast-subtitle">第43期：量子计算的突破</p>
+                        <p class="podcast-meta">2小时前更新 · 未播放</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 20px; color: #FF6B35;">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">商业思维</h4>
+                        <p class="podcast-subtitle">创业者的第一堂课</p>
+                        <p class="podcast-meta">已播放 15分钟 / 共 38分钟</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 20px; color: #FF6B35;">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item" style="position: relative;">
+                    <div style="position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; background: #FF6B35; border-radius: 50%;"></div>
+                    <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">深度对话</h4>
+                        <p class="podcast-subtitle">专访知名投资人</p>
+                        <p class="podcast-meta">1天前更新 · 未播放</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 20px; color: #FF6B35;">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">文化漫谈</h4>
+                        <p class="podcast-subtitle">日本文化深度解析</p>
+                        <p class="podcast-meta">已播放完成 · 3天前</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 16px; color: #34C759;">
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item" style="position: relative;">
+                    <div style="position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; background: #FF6B35; border-radius: 50%;"></div>
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">健康生活</h4>
+                        <p class="podcast-subtitle">如何保持良好的睡眠</p>
+                        <p class="podcast-meta">6小时前更新 · 未播放</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 20px; color: #FF6B35;">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item">
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">音乐故事</h4>
+                        <p class="podcast-subtitle">经典老歌背后的故事</p>
+                        <p class="podcast-meta">已播放 20分钟 / 共 35分钟</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 20px; color: #FF6B35;">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item">
+                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">创业故事</h4>
+                        <p class="podcast-subtitle">从0到1的创业历程</p>
+                        <p class="podcast-meta">已播放完成 · 1周前</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 16px; color: #34C759;">
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+
+                <div class="podcast-item" style="position: relative;">
+                    <div style="position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; background: #FF6B35; border-radius: 50%;"></div>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop" 
+                         alt="播客封面" class="podcast-cover">
+                    <div class="podcast-info">
+                        <h4 class="podcast-title">心理学课堂</h4>
+                        <p class="podcast-subtitle">理解情绪管理</p>
+                        <p class="podcast-meta">12小时前更新 · 未播放</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 20px; color: #FF6B35;">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 迷你播放器 -->
+            <div class="mini-player">
+                <div class="mini-player-info">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=80&h=80&fit=crop" 
+                         alt="播客封面" class="mini-player-cover">
+                    <div class="mini-player-text">
+                        <div class="mini-player-title">科技聊天室</div>
+                        <div class="mini-player-subtitle">AI的未来发展趋势</div>
+                    </div>
+                </div>
+                <div class="mini-player-controls">
+                    <button class="mini-player-btn">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="mini-player-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 底部Tab栏 -->
+            <div class="tab-bar">
+                <a href="#" class="tab-item">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-compass"></i>
+                    <span>发现</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-play-circle"></i>
+                    <span>播放</span>
+                </a>
+                <a href="#" class="tab-item active">
+                    <i class="fas fa-bookmark"></i>
+                    <span>订阅</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 - 播客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <!-- iOS 状态栏 -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span>9:41</span>
+                </div>
+                <div class="status-right">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-three-quarters"></i>
+                </div>
+            </div>
+
+            <!-- 导航栏 -->
+            <div class="nav-bar">
+                <div></div>
+                <h1 class="nav-title">我的</h1>
+                <button class="nav-button">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+
+            <!-- 主内容区域 -->
+            <div class="main-content">
+                <!-- 用户信息 -->
+                <div style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); margin: 16px; border-radius: 16px; padding: 24px; color: white;">
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop" 
+                             style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3);">
+                        <div>
+                            <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 4px;">张小明</h3>
+                            <p style="font-size: 14px; opacity: 0.9;">播客爱好者</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="text-align: center;">
+                            <h4 style="font-size: 18px; font-weight: bold;">156</h4>
+                            <p style="font-size: 12px; opacity: 0.8;">收听时长(小时)</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h4 style="font-size: 18px; font-weight: bold;">23</h4>
+                            <p style="font-size: 12px; opacity: 0.8;">收藏节目</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h4 style="font-size: 18px; font-weight: bold;">12</h4>
+                            <p style="font-size: 12px; opacity: 0.8;">订阅播客</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 功能菜单 -->
+                <div style="margin: 24px 16px;">
+                    <!-- 我的收藏 -->
+                    <div style="background: #fff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="display: flex; align-items: center; padding: 16px; border-bottom: 0.5px solid #F2F2F7;">
+                            <div style="width: 40px; height: 40px; background: #FF6B35; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-heart" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">我的收藏</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">23个收藏的节目</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; padding: 16px; border-bottom: 0.5px solid #F2F2F7;">
+                            <div style="width: 40px; height: 40px; background: #34C759; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-download" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">离线下载</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">8个已下载节目</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; padding: 16px;">
+                            <div style="width: 40px; height: 40px; background: #007AFF; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-history" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">播放历史</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">查看最近播放记录</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                    </div>
+
+                    <!-- 设置选项 -->
+                    <div style="background: #fff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="display: flex; align-items: center; padding: 16px; border-bottom: 0.5px solid #F2F2F7;">
+                            <div style="width: 40px; height: 40px; background: #8E8E93; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-bell" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">通知设置</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">管理推送通知</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; padding: 16px; border-bottom: 0.5px solid #F2F2F7;">
+                            <div style="width: 40px; height: 40px; background: #FF9500; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-palette" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">主题设置</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">浅色/深色模式</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; padding: 16px;">
+                            <div style="width: 40px; height: 40px; background: #5856D6; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-cog" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">播放设置</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">音质、自动播放等</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                    </div>
+
+                    <!-- 其他选项 -->
+                    <div style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="display: flex; align-items: center; padding: 16px; border-bottom: 0.5px solid #F2F2F7;">
+                            <div style="width: 40px; height: 40px; background: #AF52DE; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-star" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">评价应用</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">在App Store评分</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; padding: 16px; border-bottom: 0.5px solid #F2F2F7;">
+                            <div style="width: 40px; height: 40px; background: #32D74B; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-share" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">分享应用</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">推荐给朋友</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; padding: 16px; border-bottom: 0.5px solid #F2F2F7;">
+                            <div style="width: 40px; height: 40px; background: #FF3B30; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-question-circle" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">帮助与反馈</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">常见问题和意见反馈</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; padding: 16px;">
+                            <div style="width: 40px; height: 40px; background: #8E8E93; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-info-circle" style="color: white; font-size: 16px;"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #000;">关于我们</h4>
+                                <p style="font-size: 14px; color: #8E8E93;">版本 1.0.0</p>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #C7C7CC;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 迷你播放器 -->
+            <div class="mini-player">
+                <div class="mini-player-info">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=80&h=80&fit=crop" 
+                         alt="播客封面" class="mini-player-cover">
+                    <div class="mini-player-text">
+                        <div class="mini-player-title">科技聊天室</div>
+                        <div class="mini-player-subtitle">AI的未来发展趋势</div>
+                    </div>
+                </div>
+                <div class="mini-player-controls">
+                    <button class="mini-player-btn">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="mini-player-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 底部Tab栏 -->
+            <div class="tab-bar">
+                <a href="#" class="tab-item">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-compass"></i>
+                    <span>发现</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-play-circle"></i>
+                    <span>播放</span>
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-bookmark"></i>
+                    <span>订阅</span>
+                </a>
+                <a href="#" class="tab-item active">
+                    <i class="fas fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
